@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+
+header .visual img {width: 100%;}
+header .index {position:relative;}
+header h1 { position: absolute; left: 0; top: 0; z-index: 31;}
+header > ul {display:flex; justify-content:space-between; 
+  position: absolute; right: 30px; top: 0; width: 170px;}
+
+header > ul a {display:block; width:50px; font-size: 14px; color:#fff; line-height: 69px; }
+
+header #lnb {position: absolute; left: 0; top: 0; text-align:center; width: 100%;
+box-sizing: border-box;}
+header #lnb nav {position: relative; z-index: 30; border-bottom: 1px solid rgba(255,255,255,0.5); text-align: center; font-size: 0;}
+header #lnb nav > ul {display: inline-block; overflow: hidden; height: 70px;}
+header #lnb nav > ul:hover { overflow: visible;}
+header #lnb nav > ul > li {display: inline-block; position:relative;}
+header #lnb nav > ul > li > a {display: block; position: relative; width: 160px; height: 69px; 
+  font-size: 18px; color:#fff; line-height: 69px}
+
+header #lnb nav > ul > li > a:after {content: ""; position: absolute;
+ left: 50%; bottom: -1px; width: 0%; height: 2px; background: #fff; transition: all 0.5s;}
+header #lnb nav > ul > li > a:hover:after {width: 100%; left: 0;}
+header #lnb nav > ul ul {position: absolute; text-align: center; width: 100%; opacity: 0;
+transition: all 0.5s;}
+header #lnb nav > ul:hover ul {opacity: 1;}
+header #lnb nav > ul ul li {line-height: 39px}
+header #lnb nav > ul ul a {position: relative; font-size: 14px; color:#fff; transition: all 0.5s;}
+header #lnb nav > ul ul a:hover { color:#2acef1;} 
+header #lnb nav > ul ul a:after {content: ""; position: absolute;
+  left: 50%; bottom: -7px; width: 0%; height: 2px; background: #2acef1; transition: all 0.5s; }
+header #lnb nav > ul ul a:hover:after {width: 100%; left:0;}
+header #lnb nav + div {position: absolute; left: 0; top: 0; width: 100%; height: 0; background: #042e6f; z-index: 20px;
+transition: all 0.5s; opacity: 0}
+header #lnb nav:hover + div { height: 330px; opacity: 1}
